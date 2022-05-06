@@ -1,9 +1,9 @@
 const Router = require('express');
 const router = new Router();
-const cartItemController = require('../controllers/cartItemController');
+const ItemController = require('../controllers/ItemController');
 
-router.post('/', cartItemController.create); // создание
-router.get('/', cartItemController.getAll); // получение
-router.get('/:id', cartItemController.getOne);
+router.post('/', ItemController.create); // создание
+router.get('/', ItemController.getAll); // получение
+router.get('/:id', ItemController.getOne);
 
 module.exports = router;

@@ -1,13 +1,14 @@
 const Router = require('express');
 const router = new Router();
+//const deviceRouter = require('./deviceRouter');
 const cartItemRouter = require('./cartItemRouter');
 const userRouter = require('./userRouter');
-const brandRouter = require('./brandRouter');
-const typeRouter = require('./typeRouter');
+const CollectionRouter = require('./CollectionRouter');
+const CategoryRouter = require('./CategoryRouter');
 
 router.use('/user', userRouter);
-router.use('/type', typeRouter);
-router.use('/brand', brandRouter);
-router.use('/device', cartItemRouter);
+router.use('/category', CategoryRouter);
+router.use('/collection', CollectionRouter);
+router.use('/item', cartItemRouter);
 
 module.exports = router;
